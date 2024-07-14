@@ -1,0 +1,12 @@
+spawn(function()
+while true do
+    task.wait(_G.CountdownAutoRoll) 
+    game:GetService("ReplicatedStorage").Functions.Roll:InvokeServer()
+end
+end)
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "Auto Roll",
+Text = "Active !",
+Duration = 5,
+})
